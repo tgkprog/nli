@@ -1,0 +1,2 @@
+arg0 cmd line  /d/u/tmp/aCmd.sh.
+params 1 to 4: 3, f, , .

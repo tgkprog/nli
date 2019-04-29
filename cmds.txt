@@ -1,0 +1,2 @@
+/d/u/tmp/aCmd.sh param1 -p2 another
+--- done --- 
