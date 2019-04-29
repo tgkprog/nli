@@ -12,11 +12,13 @@ public class RunCmd {
 		// TODO Auto-generated method stub
 		String fullcmd = "\"C:\\AL500\\BIAFLABEL\\AddToQueue.exe\" \"C:\\AL500\\BiafLabel\\Templates\\2.xml\" -printer \\\\mickaelbpc\\System-N";
 		String fullcmd1 = "C:\\AL500\\BIAFLABEL\\AddToQueue.exe C:\\AL500\\BiafLabel\\Templates\\2.xml -printer \\\\mickaelbpc\\System-N";
+		//here put your values
 		String cmd1 = "/d/u/tmp/aCmd.sh";
 		String cmd2 = "param1";
 		String cmd3 = "-p2";
 		String cmd4 = "another";	
-		String[] command = new String[]{cmd1, cmd2, cmd3,cmd4};
+		//String[] command = new String[]{cmd1, cmd2, cmd3,cmd4};
+		//leave below alone
 		/** to verify actual commands if being built dynamically **/
 		try (FileWriter writer = new FileWriter("cmds.txt");
 		 BufferedWriter bw = new BufferedWriter(writer)) {
@@ -33,14 +35,14 @@ public class RunCmd {
 		System.err.format("IOException: %s%n", e);
 	}
 	try {
-		System.out.println("starting ");
+		System.out.println("starting " + new java.util.Date());
 		File log = new File("log"); 
 		ProcessBuilder pb =new ProcessBuilder(cmd1, cmd2, cmd3, cmd4);
 		pb.redirectErrorStream(true);
 		pb.redirectOutput(Redirect.appendTo(log));
 		Process process1=pb.start();
 		int rtnInt = process1.waitFor();
-		System.out.println("done " + rtnInt);
+		System.out.println("done return :" + rtnInt + "; at " + new java.util.Date());
 	} catch (Exception e) {
 		e.printStackTrace();
 	}
