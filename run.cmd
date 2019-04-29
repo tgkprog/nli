@@ -1,0 +1,1 @@
+C:\AL500\BIAFLABEL\AddToQueue.exe C:\AL500\BiafLabel\Templates\2.xml -printer \\mickaelbpc\System-N
